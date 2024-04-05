@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class PhoneBook {
+  constructor() {
+    this.phoneBook = [];
+  }
+
+  addContact(name, phoneNumber, email) {
+    const contact = {
+      name: name,
+      phoneNumber: phoneNumber,
+      email: email
+    };
+    this.phoneBook.push(contact);
+    console.log(`Liên hệ mới đã được thêm vào danh bạ: ${name}`);
+  }
+
+  displayContacts() {
+    console.log("Danh bạ điện thoại:");
+    this.phoneBook.forEach(contact => {
+      console.log(`Tên: ${contact.name}, Số điện thoại: ${contact.phoneNumber}, Email: ${contact.email}`);
+    });
+  }
+}
+
+const phoneBook = new PhoneBook();
+phoneBook.addContact("Linh", "0123456789", "linhne@gmail.com");
+phoneBook.addContact("Dũng", "0987654321", "dungne@gmail.com");
+phoneBook.displayContacts();
+
+    </script>
+</body>
+</html>

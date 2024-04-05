@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greetingWithWeather(name, weather){
+            let hello;
+            if(weather ==="Sunny"){
+                hello = "Chao $(name) Hom nay troi nang tuyet voi"
+            }else if(weather ==="Rainy"){
+                hello = "Chao $(name) Hom nay troi mua, hay mang theo o"
+            }else if(weather ==="Cloudy"){
+                hello = "Chao $(name) Hom nay thoi tiet khong xac dinh"
+                
+            }
+            return  hello;
+        }
+        console.log(greetingWithWeather("An", "Sunny"));
+        console.log(greetingWithWeather("Nam", "Rainy"));
+        console.log(greetingWithWeather("Tam", "Cloudy"));
+    </script>
+</body>
+</html>

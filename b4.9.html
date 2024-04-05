@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const { createPost, displayPosts, searchPost } = require('./managerPost');
+const newPost = {
+  title: 'Bài viết mới',
+  content: 'Nội dung bài viết mới',
+  author: 'Tác giả mới'
+};
+createPost(newPost);
+console.log('Danh sách bài viết:');
+displayPosts();
+const keyword = 'Tác giả mới';
+const searchResult = searchPost(keyword);
+console.log(`Kết quả tìm kiếm cho từ khóa "${keyword}":`, searchResult);
+    </script>
+    <script src="/b4.9.js"></script>
+</body>
+</html>
